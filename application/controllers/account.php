@@ -33,7 +33,7 @@ class Account extends CI_Controller {
 	
 	function mail(){
 		$config = array('protocol'=>'smtp','smtp_host'=>'ssl://smtp.gmail.com',
-		'smtp_port'=>465,'smtp_user'=>'samuelcesc@gmail.com','smtp_pass'=>'sa123sa456','mailtype'=>'html');
+		'smtp_port'=>465,'smtp_user'=>'samuelcesc@gmail.com','smtp_pass'=>'','mailtype'=>'html');
 		$to = "samuel.ojumah@covenantuniversity.edu.ng";
 		$from = "samuelcesc@gmail.com";
 		$subject = "The Course Graph";
