@@ -30,29 +30,4 @@ class Account extends CI_Controller {
 		$id = $this->input->post('user_id');
 		echo $id;
 	}
-	
-	function mail(){
-		$config = array('protocol'=>'smtp','smtp_host'=>'ssl://smtp.gmail.com',
-		'smtp_port'=>465,'smtp_user'=>'samuelcesc@gmail.com','smtp_pass'=>'','mailtype'=>'html');
-		$to = "samuel.ojumah@covenantuniversity.edu.ng";
-		$from = "samuelcesc@gmail.com";
-		$subject = "The Course Graph";
-		$message = "Finally It works...Next Stop is full functionality to the Application! Thank you Jesus!";
-		// load the email library that provided by CI
-		$this->load->library('email', $config);
-		// this will bind your attributes to email library
-		$this->email->set_newline("\r\n");
-		$this->email->from($from, 'Your Company');
-		$this->email->to($to);
-		$this->email->subject($subject);
-		$this->email->message($message);
-		
-		// send your email. if it produce an error it will print 'Fail to send your message!' for you
-		if($this->email->send()) {
-		echo "Message sent successfully!";
-		}
-		else {
-		echo "Fail to send your message!";
-		}
-	} 
 }
